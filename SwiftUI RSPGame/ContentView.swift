@@ -140,6 +140,8 @@ struct ContentView: View {
                 VStack {
                     Text("Player 2")
                     Spacer()
+                    Text(viewModel.getFinalMove(forPlayer: .two))
+                    Spacer()
                     Text(viewModel.getStatusText(forPlayer: .two))
                     HStack {
                         ForEach(viewModel.getAllowedChoices(forPlayer: .two),id: \.self) { choice in
